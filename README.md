@@ -40,30 +40,42 @@ To begin using the FundMe Solidity Foundry Study Project, make sure you have the
 ### Commands
 
 - `forge init`: Initialize a new foundry project.
+
 - `forge fmt`: Auto format the code.
+  
 - `forge compile`: Compile a smart contract.
+  
 - `anvil`: Start a private chain.
+  
 - `forge create SimpleStorage --interactive`: Manually deploy a smart contract.
+  
 - `forge script script/DeploySimpleStorage.s.sol --rpc-url $RPC_URL --broadcast --private-key $PRIVATE_KEY`: Deploy a smart contract with a script.
+  
 - `cast send smart_contract_address "function_name(data_type)" data_value --rpc-url $RPC_URL --private-key $PRIVATE_KEY`: Send a transaction.
   Example: `cast send 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 "store(uint256)" 123 --rpc-url $RPC_URL --private-key $PRIVATE_KEY`
+
 - `cast call smart_contract_address "function_name(data_type)"`: Call a function to retrieve value.
   Example: `cast call 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 "retrieve()"`
+
 - `cast --to-base hex_value dec`: Convert hex data to decimal.
   Example: `cast --to-base 0x000000000000000000000000000000000000000000000000000000000000007b dec`
+
 - `forge install package_name@version --no-commit`: Install packages and dependencies.
   Example: `forge install smartcontractkit/chainlink-brownie-contracts@0.6.1 --no-commit`
+
 - `forge test --match-test test_function_name --fork-url url`: Run a particular test.
   Example: `forge test --match-test testPriceFeedVersionIsAccurate --fork-url $SEPOLIA_RPC_URL`
+
 - `forge coverage`: Check test coverage of the smart contract.
+
 - `forge snapshot`: Check gas usage.
+
 - `make deploy`: Deploy this project to the Anvil local chain.
 
 ## Test Coverage
 
 Here's the test coverage summary for the FundMe Solidity smart contract:
 
-```plaintext
 | File                           | % Lines        | % Statements   | % Branches    | % Funcs       |
 |--------------------------------|----------------|----------------|---------------|---------------|
 | script/DeployFundMe.s.sol      | 0.00% (0/6)    | 0.00% (0/9)    | 100.00% (0/0) | 0.00% (0/1)   |
